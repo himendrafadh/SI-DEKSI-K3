@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 
 interface BodySilhouetteProps {
-  missingPPE: Array<"helmet" | "vest" | "shoes" | "mask">;
+  missingPPE: Array<"helmet" | "vest" | "shoes">;
 }
 
 export function BodySilhouette({ missingPPE }: BodySilhouetteProps) {
@@ -111,32 +111,6 @@ export function BodySilhouette({ missingPPE }: BodySilhouetteProps) {
             </motion.g>
           )}
 
-          {missingPPE.includes("mask") && (
-            <motion.g
-              animate={{ opacity: [0.4, 1, 0.4] }}
-              transition={{ duration: 1, repeat: Infinity, delay: 0.1 }}
-            >
-              <rect
-                x="75"
-                y="55"
-                width="50"
-                height="25"
-                rx="5"
-                fill="none"
-                stroke="#ef4444"
-                strokeWidth="6"
-                className="drop-shadow-[0_0_10px_rgba(239,68,68,0.8)]"
-              />
-              <text
-                x="175"
-                y="70"
-                textAnchor="start"
-                className="text-xs font-bold fill-red-400"
-              >
-                → MASK
-              </text>
-            </motion.g>
-          )}
 
           {missingPPE.includes("shoes") && (
             <motion.g
@@ -190,7 +164,6 @@ export function BodySilhouette({ missingPPE }: BodySilhouetteProps) {
               {item === "helmet" && "Safety Helmet Required"}
               {item === "vest" && "Safety Vest Required"}
               {item === "shoes" && "Safety Shoes Required"}
-              {item === "mask" && "Face Mask Required"}
             </span>
           </motion.div>
         ))}

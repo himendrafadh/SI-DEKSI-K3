@@ -17,8 +17,7 @@ export function CheckInPage() {
   const ppeStatus = {
     helmet: "secured" as const,
     vest: "secured" as const,
-    shoes: "secured" as const,
-    mask: "missing" as const,
+    shoes: "missing" as const,
   };
 
   // Determine overall access status
@@ -99,11 +98,6 @@ export function CheckInPage() {
                     icon={Footprints}
                     label="Safety Shoes"
                     status={ppeStatus.shoes}
-                  />
-                  <PPEChecklistItem
-                    icon={Shield}
-                    label="Face Mask"
-                    status={ppeStatus.mask}
                   />
                 </div>
 
