@@ -1,4 +1,4 @@
-import { Monitor, FileText, BarChart3, Shield } from "lucide-react";
+import { Monitor, FileText, BarChart3, Shield, Scan } from "lucide-react";
 import { Link, useLocation } from "react-router";
 
 const navItems = [

@@ -1,4 +1,5 @@
-import { Wifi, Cloud, Server, CheckCircle2 } from "lucide-react";
+import { Wifi, Cloud, Server, CheckCircle2, Scan } from "lucide-react";
+import { Link } from "react-router";
 
 export function StatusBar() {
   return (
@@ -10,6 +11,16 @@ export function StatusBar() {
             <p className="text-xs text-slate-500">System Time</p>
             <p className="text-white font-mono text-sm">Monday, March 16, 2026 - 14:32:45</p>
           </div>
+          
+          {/* Check-In Kiosk Quick Access */}
+          <Link
+            to="/check-in"
+            target="_blank"
+            className="flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 px-3 py-1.5 rounded-lg hover:bg-blue-500/20 transition-all"
+          >
+            <Scan className="w-4 h-4 text-blue-400" />
+            <span className="text-xs text-blue-400 font-medium">Open Check-In Kiosk</span>
+          </Link>
         </div>
 
         {/* Status Indicators */}

@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import { RealTimePage } from "./pages/RealTimePage";
 import { LogsPage } from "./pages/LogsPage";
 import { AnalyticsPage } from "./pages/AnalyticsPage";
+import { CheckInPage } from "./pages/CheckInPage";
 import { Sidebar } from "./components/Sidebar";
 import { StatusBar } from "./components/StatusBar";
 import { Outlet } from "react-router";
@@ -33,5 +34,10 @@ export const router = createBrowserRouter([
       { path: "logs", Component: LogsPage },
       { path: "analytics", Component: AnalyticsPage },
     ],
+  },
+  // Standalone check-in kiosk page (no sidebar/statusbar layout)
+  {
+    path: "/check-in",
+    Component: CheckInPage,
   },
 ]);
